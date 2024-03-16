@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="horrorMovie" class="spring_project.Horror">
+
+    </bean>
+
+    <bean id="dvd" class="spring_project.DVD">
+<!--        <constructor-arg ref="horrorMovie" />-->
+<!--        <property name="horror" ref="horrorMovie"/>-->
+        <property name="name" value="SomeDVD123"/>
+        <property name="cost" value="10000"/>
+    </bean>
+
+    <bean id            ="myPerson"
+          class         ="spring_project.Person"
+          init-method   ="myInitMethod"
+          factory-method="getPerson"
+          destroy-method="myDestroyMethod">
+
+    </bean>
+
+</beans>
